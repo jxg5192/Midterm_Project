@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+
+h1, h2, h3 {
+  font-family: "Chewy", Regular;
+}
+
+h4{
+      color: #7a6a60;
+}
+body {
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+  background-color: #fff9ef;
+  color: #2b1d12;
+  margin: 0;
+  text-align: center;
+}
+
+h1{
+     font-size: 2.4em;
+  color: #d66c2c;
+  margin-bottom: 10px;
+}
+
+h2{
+  color: #3a2616;
+  /* color: #7a6a60; */
+  font-size: 1.3em;
+  margin-bottom: 14px;
+}
+
+p {
+  color: #7a6a60;
+  /* line-height: 1.6; */
+  /* font-size: 1.1em; */
+}
+
+header {
+  margin: 40px auto 30px;
+  padding: 10px;
+  max-width: 800px;
+  /* background: linear-gradient(180deg, #ffffff, #fff7e6);
+  border: 2px solid rgba(255, 186, 107, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05); */
+}
+
+
+/* Crack page wrapper */
+.crack-page{
+  background: linear-gradient(180deg, #fff6e8, #ffeede);
+  padding: 36px 20px 56px;
+  border-top: 3px solid rgba(255,186,107,.5);
+}
+
+
+/* 4-column cookie grid */
+.cookie-grid{
+  max-width: 1100px;
+  margin: 10px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 0 8px;
+}
+
+/* Each cookie card */
+.cookie-card{
+  /* background: #fff; */
+  border: 2px solid rgba(255,122,122,.45); 
+   border-radius: 16px;
+  padding: 14px 14px 16px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.cookie-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(0,0,0,.08);
+  border-color: rgba(255,186,107,.9);
+}
+
+.cookie-title{
+  
+  font-size: 1.2rem;
+  color: #e07a5f;
+  margin: 4px 0 8px;
+}
+
+/* Cookie image */
+.cookie-img{
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 10px;
+  transition: transform .15s ease;
+}
+.cookie-img:hover{ transform: translateY(-2px) scale(1.02); }
+
+/* Crack button */
+.crack-btn{
+  background: #358c8a;
+  color: white; 
+  border:none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  cursor: pointer;
+  transition: transform .1s ease, filter .2s ease;
+}
+/* .crack-btn:hover{ transform: translateY(-1px); }
+.crack-btn:active{ transform: translateY(0); filter: brightness(.96); } */
+
+/* Fortune display */
+.fortune-box{
+  margin-top: 12px;
+  min-height: 60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px;
+  background: #fffdf8;
+  border: 2px dashed #ffba6b;
+  border-radius: 12px;
+  font-weight: 700;
+  color:#3a2a1f;
+}
+
+
