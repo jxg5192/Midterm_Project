@@ -74,10 +74,10 @@ header {
   padding: 14px 14px 16px;
   text-align: center;
   box-shadow: 0 6px 14px rgba(0,0,0,.06);
-  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  /* transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease; */
 }
 .cookie-card:hover{
-  transform: translateY(-3px);
+  /* transform: translateY(-3px); */
   box-shadow: 0 12px 22px rgba(0,0,0,.08);
   border-color: rgba(255,186,107,.9);
 }
@@ -98,8 +98,10 @@ header {
   padding: 8px;
   margin-bottom: 10px;
   transition: transform .15s ease;
+  transform-origin: center center;   
+
 }
-.cookie-img:hover{ transform: translateY(-2px) scale(1.02); }
+/* .cookie-img:hover{ transform: translateY(-2px) scale(1.02); } */
 
 /* Crack button */
 .crack-btn{
@@ -137,4 +139,26 @@ header {
   display: none;
 }
 
+
+p a {
+  display: inline-block;         
+  padding: 6px 16px;             /* button padding */
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Playpen Sans";
+  text-decoration: none;
+  color: white;                  /* TEXT/font color */
+  background-color: #d66c2c;
+  border-radius: 25px;            /* rounded to make it look pill-shaped */
+  border: none;
+  transition: all 0.3s ease;    
+}
+
+/* Hover effect */
+p a:hover {
+  background-color: #d66c2c;
+  transform: scale(1.05);      /*  zoom a bit when hover */
+  font-weight: bold; 
+    color: white;
+}
 

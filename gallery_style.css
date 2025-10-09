@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+/* ===== Cookie Gallery ===== */
+.cookie-gallery{
+  padding: 32px 20px 56px;
+  background: linear-gradient(180deg, #fff9ef, #fff4e2);
+}
+
+.gallery-head{
+  text-align:center;
+  max-width: 780px;
+  margin: 0 auto 16px;
+}
+
+h1, h2, h3 {
+  font-family: "Chewy", Regular;
+}
+h4{
+      color: #7a6a60;
+}
+
+h1{
+  color: #d66c2c;
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+  background-color: #fff9ef;
+  color: #2b1d12;
+  margin: 0;
+  text-align: center;
+}
+
+
+/* Pretty grid */
+.gallery-grid{
+  max-width: 1100px;
+  margin: 10px auto 0;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 8px;
+}
+
+/* Tiles */
+.tile{
+  position: relative;
+  background:#fff;
+  border: 2px solid rgba(255,186,107,.55);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.tile:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.10);
+  border-color: rgba(255,186,107,.9);
+}
+
+/* Image */
+.tile img{
+  width:100%;
+  height: 210px;           /* consistent height */
+  object-fit: cover;       /* fill without squish */
+  display:block;
+  transition: transform .25s ease;
+}
+.tile:hover img{ transform: scale(1.06); }
+
+/* Caption overlay */
+.tile figcaption{
+  position:absolute;
+  left:10px; right:10px; bottom:10px;
+  background: rgba(255, 255, 255, .92);
+  color:#3a2a1f;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 2px dashed #ffba6b;
+  text-align:center;
+  pointer-events:none;     /* clicks pass through to image (for lightbox) */
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px){
+  .gallery-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 680px){
+  .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 460px){
+  .gallery-grid{ grid-template-columns: 1fr; }
+}
+
+/* ===== Tiny Lightbox (optional, no frameworks) ===== */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;           /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 50;
+}
+.lightbox.open{ display: flex; }
+
+#lb-img{
+  max-width: min(90vw, 1000px);
+  max-height: 70vh;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  display:block;
+}
+
+#lb-cap{
+  color:#fff;
+  margin-top: 10px;
+  text-align:center;
+  font-weight: 700;
+}
+
+.lb-close{
+  position: absolute;
+  top: 10px; right: 14px;
+  font-size: 36px;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+
+p a {
+  display: inline-block;         
+  padding: 6px 16px;             /* button padding */
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Playpen Sans";
+  text-decoration: none;
+  color: white;                  /* TEXT/font color */
+  background-color: #d66c2c;
+  border-radius: 25px;            /* rounded to make it look pill-shaped */
+  border: none;
+  transition: all 0.3s ease;    
+}
+
+/* Hover effect */
+p a:hover {
+  background-color: #d66c2c;
+  transform: scale(1.05);      /*  zoom a bit when hover */
+  font-weight: bold; 
+    color: white;
+}
