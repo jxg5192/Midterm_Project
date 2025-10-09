@@ -31,6 +31,12 @@ h2{
   margin-bottom: 14px;
 }
 
+.cookie-card h3{
+  font-size: 1.2rem;
+  color: #e07a5f;
+  margin: 4px 0 8px;
+}
+
 p {
   color: #7a6a60;
   /* line-height: 1.6; */
@@ -41,19 +47,13 @@ header {
   margin: 40px auto 30px;
   padding: 10px;
   max-width: 800px;
-  /* background: linear-gradient(180deg, #ffffff, #fff7e6);
+  background: linear-gradient(180deg, #ffffff, #fff7e6);
   border: 2px solid rgba(255, 186, 107, 0.6);
   border-radius: 16px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
 }
 
 
-/* Crack page wrapper */
-.crack-page{
-  background: linear-gradient(180deg, #fff6e8, #ffeede);
-  padding: 36px 20px 56px;
-  border-top: 3px solid rgba(255,186,107,.5);
-}
 
 
 /* 4-column cookie grid */
@@ -127,8 +127,14 @@ header {
   background: #fffdf8;
   border: 2px dashed #ffba6b;
   border-radius: 12px;
-  font-weight: 700;
-  color:#3a2a1f;
+  font-weight: 600;
+  /* color:#3a2a1f; */
+  color: #7a6a60;
+}
+
+
+.hide {
+  display: none;
 }
 
 

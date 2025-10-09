@@ -94,19 +94,26 @@ header {
   transition: transform 0.2s ease;
 }
 
-/* === Buttons === */
-.buttonStyle {
+
+
+a {
+  display: inline-block;         
+  padding: 6px 16px;             /* button padding */
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Playpen Sans";
+  text-decoration: none;
+  color: white;                  /* TEXT/font color */
   background-color: #358c8a;
-  color: white; 
+  border-radius: 25px;            /* rounded to make it look pill-shaped */
   border: none;
-  border-radius: 999px;
-  padding: 10px 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.1s ease;
+  transition: all 0.3s ease;    
 }
 
-.buttonStyle:hover {
+/* Hover effect */
+a:hover {
   background-color: #358c8a;
-  transform: translateY(-2px);
+  transform: scale(1.05);      /*  zoom a bit when hover */
+  font-weight: bold; 
+    color: white;
 }
