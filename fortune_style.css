@@ -19,10 +19,11 @@
   margin-bottom: 6px;
 }
 
-.add-fortune p {
-  font-family: "Playpen Sans", cursive;
-  color: #2b1d12;
+
+.add-fortune h3{
+  font-family: "Chewy", Regular;
   margin-bottom: 6px;
+    color: #2b1d12;
 }
 
 
@@ -45,7 +46,9 @@
 #fortuneForm button {
   background-color: #3a8473;
   color: white;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Playpen Sans";
   border: none;
   border-radius: 10px;
   padding: 10px 18px;
@@ -88,4 +91,75 @@ p a:hover {
   transform: scale(1.05);      /*  zoom a bit when hover */
   font-weight: bold; 
     color: white;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+/* --- Grid Nav Wrapper --- */
+.cookie-nav{
+  width: 100%;
+  margin: 20px auto 28px;
+}
+
+/* --- Grid Nav Box --- */
+.cookie-nav ul{
+  list-style: none;
+  margin: 0 auto;
+  padding: 10px 16px;
+
+  background: linear-gradient(180deg, #ffffff, #fff7e6);
+  border: 2px solid rgba(255,186,107,.65);   /* cookie gold */
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+
+  display: grid;
+  grid-template-columns: repeat(4, auto);    /* 4 columns = 4 links */
+  gap: 12px 18px;                             /* row/col spacing */
+  justify-content: center;                    /* center the grid */
+  width: fit-content;                         /* box hugs content */
+}
+
+/* --- Items --- */
+.cookie-nav li{ margin: 0; }
+
+/* --- Links --- */
+.cookie-nav .nav-link{
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Chewy", cursive;
+  font-size: 1.05rem;
+  color: #d66c2c;                             /* warm cookie orange */
+  background: #fff;
+  border: 2px solid rgba(255,186,107,.65);
+  border-radius: 999px;
+  padding: 8px 14px;
+  transition: transform .12s ease, box-shadow .2s ease, color .2s ease;
+}
+
+/* Hover / focus */
+.cookie-nav .nav-link:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.08);
+  color: #ff9f4d;
+}
+.cookie-nav .nav-link:focus-visible{
+  outline: 3px solid #1e90ff;
+  outline-offset: 2px;
+}
+
+/* Current page highlight — add class="current" to that page's link */
+.cookie-nav .nav-link.current{
+  background: #358c8a;      /* mint-teal from your theme */
+  color: #fff;
+  border-color: #358c8a;
+}
+
+/* --- Responsive: stack to 2 columns on small screens --- */
+@media (max-width: 580px){
+  .cookie-nav ul{
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 12px;
+  }
 }

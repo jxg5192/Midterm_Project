@@ -120,3 +120,19 @@ a:hover {
 }
 
 
+@media (max-width: 580px) {
+ .gallery{
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 18px auto 36px;
+    padding: 0 14px;
+    max-width: 520px;        /* keeps a nice readable line length */
+  }
+  .card{
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  
+}
+

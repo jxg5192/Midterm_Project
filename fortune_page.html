@@ -12,15 +12,27 @@
 </head>
 
 <body> 
+
+<!-- adding navigation -->
+ <nav class="cookie-nav" >
+  <ul>
+    <li><a href="index.html"        class="nav-link"> Home</a></li>
+    <li><a href="crack_page.html"   class="nav-link"> Play </a></li>
+    <li><a href="gallery_page.html"      class="nav-link"> Bake </a></li>
+    <li><a href="fortune_page.html"  class="nav-link"> Share the Luck</a></li>
+  </ul>
+</nav>
+
+
 <section class="add-fortune">
   <h2>Share the luck! 🍀</h2>
-  <p>Add your own fortune by typing your lucky phrase below...</p>
+  <h3>Add your own message by typing a lucky phrase below...</h3>
 
   <form id="fortuneForm">
     <input 
       type="text" 
       id="fortuneInput" 
-      placeholder="e.g., You’ll ace your next project!"
+      placeholder="Say something sweet... "
       maxlength="80"
       required>
     <button type="submit">Add Fortune</button>
