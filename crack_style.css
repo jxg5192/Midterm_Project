@@ -47,10 +47,10 @@ header {
   margin: 40px auto 30px;
   padding: 10px;
   max-width: 800px;
-  background: linear-gradient(180deg, #ffffff, #fff7e6);
-  border: 2px solid rgba(255, 186, 107, 0.6);
-  border-radius: 16px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  /* background: linear-gradient(180deg, #ffffff, #fff7e6); */
+  /* border: 2px solid rgba(255, 186, 107, 0.6); */
+  /* border-radius: 16px; */
+  /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05); */
 }
 
 
@@ -79,7 +79,7 @@ header {
 .cookie-card:hover{
   /* transform: translateY(-3px); */
   box-shadow: 0 12px 22px rgba(0,0,0,.08);
-  border-color: rgba(255,186,107,.9);
+  border-color: #d66c2c;
 }
 
 .cookie-title{
@@ -176,11 +176,11 @@ p a:hover {
 
 
 
-@media (max-width: 580px) {
+@media (max-width: 690px) {
  .cookie-grid{
     grid-template-columns: 1fr;
     gap: 14px;
-    max-width: 520px;      /* keeps nice readable width */
+    max-width: 520px;     
     margin: 10px auto 32px;
     padding: 0 12px;
   }
@@ -193,12 +193,12 @@ p a:hover {
   .cookie-card h3{ font-size: 1.15rem; }
 
   .cookie-img{
-    height: 150px;         /* a bit shorter so the card fits nicely */
+    height: 150px;        
     padding: 6px;
   }
 
   .crack-btn{
-    padding: 12px 18px;    /* bigger button for thumbs */
+    padding: 12px 18px;  
     font-size: 1rem;
   }
 

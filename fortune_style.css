@@ -2,11 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
 
+body{
+  background-color: #fff9ef;
+}
+
 .add-fortune {
   text-align: center;
   max-width: 500px;
   margin: 60px auto;
-  background: #fffaf2;
+  /* background: #fffaf2; */
+  background: linear-gradient(180deg, #ffffff, #fff7e6);
   padding: 24px 28px;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
@@ -14,9 +19,12 @@
 }
 
 .add-fortune h2 {
-  font-family: "Chewy", cursive;
-  color: #e07a5f;
+  font-family: "Chewy";
+  /* color: #e07a5f; */
+    color: #d66c2c;
   margin-bottom: 6px;
+  font-size: 2.0em; 
+  
 }
 
 
@@ -80,7 +88,7 @@ p a {
   text-decoration: none;
   color: white;                  /* TEXT/font color */
   background-color: #d66c2c;
-  border-radius: 25px;            /* rounded to make it look pill-shaped */
+  border-radius: 25px;           
   border: none;
   transition: all 0.3s ease;    
 }
@@ -101,6 +109,8 @@ p a:hover {
 .cookie-nav{
   width: 100%;
   margin: 20px auto 28px;
+  display: flex;
+  justify-content: center;
 }
 
 /* --- Grid Nav Box --- */
@@ -144,22 +154,12 @@ p a:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,.08);
   color: #ff9f4d;
 }
-.cookie-nav .nav-link:focus-visible{
-  outline: 3px solid #1e90ff;
-  outline-offset: 2px;
-}
 
-/* Current page highlight — add class="current" to that page's link */
-.cookie-nav .nav-link.current{
-  background: #358c8a;      /* mint-teal from your theme */
-  color: #fff;
-  border-color: #358c8a;
-}
 
-/* --- Responsive: stack to 2 columns on small screens --- */
+/* --- Responsive --- */
 @media (max-width: 580px){
   .cookie-nav ul{
-    grid-template-columns: repeat(2, auto);
-    gap: 10px 12px;
+    grid-template-columns: 1fr;
   }
 }
+

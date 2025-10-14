@@ -1,6 +1,6 @@
 "use strict";
 
-// js element 1 
+// js element #1 
 let buttons = document.querySelectorAll(".crack-btn");
 
 for (let i = 0; i < buttons.length; i++) {
@@ -19,7 +19,7 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
-// js element 2
+// js element #2
 const form = document.getElementById('fortuneForm');
 const input = document.getElementById('fortuneInput');
 const list = document.getElementById('fortuneList');
@@ -38,12 +38,12 @@ if (form && input && list) {
   });
 }
 
-// --- js element 3 (fix selector + single transform) ---
+// --- js element #3 ---
 const cookieImgs = document.querySelectorAll('.cookie-img');
 
 cookieImgs.forEach(img => {
   img.addEventListener('mouseover', () => {
-    img.style.transform = 'scale(1.08)';   // gentle bump
+    img.style.transform = 'scale(1.08)';  
   });
   img.addEventListener('mouseout', () => {
     img.style.transform = 'scale(1)';
