@@ -59,7 +59,7 @@ header {
 /* 4-column cookie grid */
 .cookie-grid{
   max-width: 1100px;
-  margin: 10px auto 0;
+  margin: 40px auto 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
