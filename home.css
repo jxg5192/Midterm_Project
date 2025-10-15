@@ -18,22 +18,19 @@ body {
 }
 
 h1{
-     font-size: 2.4em;
+  font-size: 2.4em;
   color: #d66c2c;
   margin-bottom: 10px;
 }
 
 h2{
   color: #3a2616;
-  /* color: #7a6a60; */
   font-size: 1.3em;
   margin-bottom: 14px;
 }
 
 p {
   color: #7a6a60;
-  /* line-height: 1.6; */
-  /* font-size: 1.1em; */
 }
 
 header {
@@ -47,8 +44,7 @@ header {
 }
 
 
-
-/* === Grid that holds your cards === */
+/* grid to hold the section cards */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -58,21 +54,18 @@ header {
   padding: 0 20px;
 }
 
-/* === Individual cards === */
+/* play, bake day, and your turn individual cards */
 .card {
   background: #ffffff;
   /* background: linear-gradient(180deg, #ffffff, #fff0e6);  */
-  /* background: linear-gradient(180deg, #ffffff, #fff7e6); */
-  /* background: linear-gradient(180deg, #fffaf1 0%, #fff3e0 100%); */
-
   border: 3px solid rgba(255, 186, 107, 0.5);
   border-radius: 18px;
   padding: 20px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
    display: grid;
-  place-items: center;        /* centers everything vertically + horizontally */
+  place-items: center;       
   text-align: center;
-  min-height: 260px;          /* make them “longer” */
+  min-height: 260px;         
 }
 
 .card:hover{
@@ -82,14 +75,14 @@ header {
   cursor: pointer;
 }
 
-/* === Card headings === */
+/* headings INSIDE the cards themselves */
 .card h2 {
   color: #e07a5f;
   font-size: 1.6em;
   margin-bottom: 10px;
 }
 
-/* === Card subheadings === */
+/* SUBheadings INSIDE the cards themselves */
 .card h4 {
   font-size: 1.2em;
   /* color: #358c8a; */
@@ -99,6 +92,16 @@ header {
   font-weight: 600;
 }
 
+/* circle images inside the cards themselves */
+.card-icon {
+  width: 150px;                 /*  size of circle for pictures */
+  height: 150px;
+  border-radius: 50%;          /* making it a circle */
+  object-fit: cover;          
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  margin-bottom: 14px;         /* space below the pics */
+  background-color: #fffaf1; 
+}
 
 
 
@@ -109,29 +112,31 @@ a {
   font-weight: normal;
   font-family: "Playpen Sans";
   text-decoration: none;
-  color: white;                  /* TEXT/font color */
+  color: white;                  /* color for the button TEXT */
   background-color: #358c8a;
-  border-radius: 25px;            /* rounded to make it look pill-shaped */
+  border-radius: 25px;            /* rounded button shape */
   border: none;
   transition: all 0.3s ease;    
 }
 
-/* Hover effect */
+/* Hover effect for buttons */
 a:hover {
   background-color: #358c8a;
-  transform: scale(1.05);      /*  zoom a bit when hover */
+  transform: scale(1.05);      /*  zoom a bit when hovering on buttons */
   font-weight: bold; 
     color: white;
 }
 
 
-@media (max-width: 580px) {
+/* RESPONSIVE */
+
+@media (max-width: 680px) {
  .gallery{
     grid-template-columns: 1fr;
     gap: 16px;
     margin: 18px auto 36px;
     padding: 0 14px;
-    max-width: 520px;        /* keeps a nice readable line length */
+    max-width: 520
   }
   .card{
     padding: 16px;
