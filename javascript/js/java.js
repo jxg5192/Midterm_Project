@@ -83,3 +83,65 @@ for (let i = 0; i < cookieImgs.length; i++) {
     img.style.transform = 'scale(1)'; //  normal size
   });
 }
+
+
+
+
+
+
+
+
+
+// Grab all slides
+let galleryClass = document.querySelectorAll('.imageGallery');
+
+// Hide all slides initially
+for (let i = 0; i < galleryClass.length; i++) {
+  galleryClass[i].style.display = "none";
+}
+
+// Buttons
+let previousButton = document.getElementById('previous');
+let nextButton = document.getElementById('next');
+let startButton = document.getElementById('start');
+let stopButton = document.getElementById('stop');
+
+// Start at first image
+let currentIndex = 0;
+galleryClass[currentIndex].style.display = "block";
+
+// Manual navigation
+previousButton.addEventListener('click', function() {
+  galleryClass[currentIndex].style.display = "none";
+  currentIndex = currentIndex - 1;
+  if (currentIndex < 0) currentIndex = galleryClass.length - 1;
+  galleryClass[currentIndex].style.display = "block";
+});
+
+nextButton.addEventListener('click', function() {
+  galleryClass[currentIndex].style.display = "none";
+  currentIndex++;
+  if (currentIndex >= galleryClass.length) currentIndex = 0;
+  galleryClass[currentIndex].style.display = "block";
+});
+
+// Auto slideshow
+let autoCycleActive = false;
+let cycleInterval;
+
+startButton.addEventListener('click', function() {
+  if (!autoCycleActive) {
+    cycleInterval = setInterval(function() {
+      galleryClass[currentIndex].style.display = "none";
+      currentIndex++;
+      if (currentIndex >= galleryClass.length) currentIndex = 0;
+      galleryClass[currentIndex].style.display = "block";
+    }, 3000);
+    autoCycleActive = true;
+  }
+});
+
+stopButton.addEventListener('click', function() {
+  clearInterval(cycleInterval);
+  autoCycleActive = false;
+});
