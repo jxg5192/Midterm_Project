@@ -1,13 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
-/* font for headings */
+/* changing the font for headings */
 h1, h2, h3 {
-  font-family: "Chewy", Regular;
+  font-family: "Chewy",cursive;
 }
+
+/* making header/titles orange and larger */
+h1{
+  font-size: 2.4em;
+  color: #d66c2c;
+  margin-bottom: 10px;
+}
+
+/* making h2 grey and larger */
+h2{
+  color: #3a2616;
+  font-size: 1.3em;
+  margin-bottom: 14px;
+}
+
+/* making h3 text color grey */
 h3{
       color: #7a6a60;
 }
+
+/* making pargraph text grey */
+p {
+  color: #7a6a60;
+}
+
+
+/* making body text a different font and black */
 body {
   font-family: "Playpen Sans", cursive;
   font-style: normal;
@@ -17,37 +41,24 @@ body {
   text-align: center;
 }
 
-h1{
-  font-size: 2.4em;
-  color: #d66c2c;
-  margin-bottom: 10px;
-}
 
-h2{
-  color: #3a2616;
-  font-size: 1.3em;
-  margin-bottom: 14px;
-}
 
-p {
-  color: #7a6a60;
-}
-
+/* adding a box/border around the title/header */
 header {
-  margin: 40px auto 30px;
+  margin: 40px auto 30px; /* centering horiz */
   padding: 20px;
   max-width: 800px;
-  background: linear-gradient(180deg, #ffffff, #fff7e6);
+  background: linear-gradient(180deg, #ffffff, #fff7e6);  /* yellow gradient background*/
   border: 2px solid rgba(255, 186, 107, 0.6);
   border-radius: 16px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
 }
 
 
-/* grid to hold the section cards */
+/* grid section to hold the  cards */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); 
   gap: 24px;
   max-width: 1100px;
   margin: 40px auto 60px;
@@ -69,7 +80,6 @@ header {
 }
 
 .card:hover{
-  /* transform: translateY(-3px); */
   box-shadow: 0 12px 22px rgba(0,0,0,.08);
   border-color:  #d66c2c;
   cursor: pointer;
@@ -94,17 +104,16 @@ header {
 
 /* circle images inside the cards themselves */
 .card-icon {
-  width: 150px;                 /*  size of circle for pictures */
+  width: 150px;                 /*  size of the pictures */
   height: 150px;
-  border-radius: 50%;          /* making it a circle */
+  border-radius: 50%;          /* making it a circle shape */
   object-fit: cover;          
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   margin-bottom: 14px;         /* space below the pics */
   background-color: #fffaf1; 
 }
 
-
-
+/* buttons for navigation */
 a {
   display: inline-block;         
   padding: 6px 16px;             /* button padding */
@@ -119,7 +128,7 @@ a {
   transition: all 0.3s ease;    
 }
 
-/* Hover effect for buttons */
+/* Hover effect for navigation buttons */
 a:hover {
   background-color: #358c8a;
   transform: scale(1.05);      /*  zoom a bit when hovering on buttons */
@@ -130,13 +139,13 @@ a:hover {
 
 /* RESPONSIVE */
 
-@media (max-width: 680px) {
+@media (max-width: 800px) {
  .gallery{
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: 1fr;  /*  switch to single columns */
+    gap: 16px;  /*  shrink space  a bit */
     margin: 18px auto 36px;
     padding: 0 14px;
-    max-width: 520
+    max-width: 520px; 
   }
   .card{
     padding: 16px;

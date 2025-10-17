@@ -7,11 +7,12 @@ let buttons = document.querySelectorAll(".crack-btn");
 
 // looping through each of the buttons
 for (let i = 0; i < buttons.length; i++) {
-  let btn = buttons[i];
+  let btn = buttons[i];  // current button
 
   btn.addEventListener("click", function () {
 
     //  hide all fortunes before showing the one that was selected
+    // make sure only 1 fortune shows at a time
     let fortuneBoxes = document.querySelectorAll(".fortune-box");
     for (let j = 0; j < fortuneBoxes.length; j++) {
       fortuneBoxes[j].classList.add("hide");
@@ -22,7 +23,7 @@ for (let i = 0; i < buttons.length; i++) {
       buttons[k].textContent = "Crack It!";
     }
 
-    //  grab the fortune next to the clicked button
+    //  grab the fortune right NEXT to the clicked button
     let fortune = btn.nextElementSibling;
     fortune.classList.toggle("hide");
 
@@ -49,7 +50,7 @@ if (form && input && list) {
     form.addEventListener('submit', function(e) {
     e.preventDefault(); // stops  page from reloading when form is submitted
 
-      // remove leading/trailing spaces from the inputted text
+      // remove leading/trailing spaces from the users inputted text
     const fortune = input.value.trim();
 
         // If the input is empty, stop here
@@ -89,58 +90,62 @@ for (let i = 0; i < cookieImgs.length; i++) {
 
 
 
+// js element 4
 
 
-
-// Grab all slides
+// grabbing images for ingredient checklist
 let galleryClass = document.querySelectorAll('.imageGallery');
 
-// Hide all slides initially
+
 for (let i = 0; i < galleryClass.length; i++) {
   galleryClass[i].style.display = "none";
 }
 
-// Buttons
+// prev, next, start, stop buttons
 let previousButton = document.getElementById('previous');
 let nextButton = document.getElementById('next');
 let startButton = document.getElementById('start');
 let stopButton = document.getElementById('stop');
 
-// Start at first image
+
 let currentIndex = 0;
-galleryClass[currentIndex].style.display = "block";
+galleryClass[currentIndex].style.display = "block"; // show first pic when the page loads
 
-// Manual navigation
+//  navigation with prev button.... when user clicks prev button 
 previousButton.addEventListener('click', function() {
-  galleryClass[currentIndex].style.display = "none";
-  currentIndex = currentIndex - 1;
-  if (currentIndex < 0) currentIndex = galleryClass.length - 1;
+  galleryClass[currentIndex].style.display = "none"; // hide current pic
+  currentIndex = currentIndex - 1; // show the previous pic
+  if (currentIndex < 0) currentIndex = galleryClass.length - 1; // move back 1 index
   galleryClass[currentIndex].style.display = "block";
 });
 
+//  navigation with next button.... when user clicks prev button 
 nextButton.addEventListener('click', function() {
-  galleryClass[currentIndex].style.display = "none";
-  currentIndex++;
-  if (currentIndex >= galleryClass.length) currentIndex = 0;
+  galleryClass[currentIndex].style.display = "none"; // hide current pic
+  currentIndex++; // show the next pic
+  if (currentIndex >= galleryClass.length) currentIndex = 0; // move forward 1 index
   galleryClass[currentIndex].style.display = "block";
 });
 
-// Auto slideshow
-let autoCycleActive = false;
+// auto slideshow with the pics
+let autoCycleActive = false; 
 let cycleInterval;
 
+
+// when user clicks on start button
 startButton.addEventListener('click', function() {
   if (!autoCycleActive) {
     cycleInterval = setInterval(function() {
-      galleryClass[currentIndex].style.display = "none";
-      currentIndex++;
+      galleryClass[currentIndex].style.display = "none"; // hide current
+      currentIndex++;  // move forward
       if (currentIndex >= galleryClass.length) currentIndex = 0;
       galleryClass[currentIndex].style.display = "block";
-    }, 3000);
+    }, 3000); // change the pics every 3 secs
     autoCycleActive = true;
   }
 });
 
+// when user clicks stop button, stop the slidehsow
 stopButton.addEventListener('click', function() {
   clearInterval(cycleInterval);
   autoCycleActive = false;
